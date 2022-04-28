@@ -1,0 +1,17 @@
+{
+	"name": "Ubuntu",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VARIANT": "focal"
+		}
+	},
+	"settings": {},
+	"extensions": [
+		"Dart-Code.dart-code",
+	],
+	"postCreateCommand": "bash .devcontainer/setup.sh",
+	"remoteEnv": {
+		"PATH": "${containerWorkspaceFolder}/dart-sdk/bin:${containerWorkspaceFolder}/depot_tools:${containerEnv:PATH}",
+	},
+}
